@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: stych-bot
+    env: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install chromium
+    startCommand: python stych_bot.py
